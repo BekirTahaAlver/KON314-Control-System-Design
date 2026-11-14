@@ -34,5 +34,9 @@ Requires MATLAB R2024b or newer. No toolboxes needed.
 | `ZieglerNicholsLab_Guide.pdf` | Student guide (2 pages) |
 | `ZieglerNicholsLab_Guide.md` | Student guide (Markdown) |
 
+## Acknowledgement
+
+Developed with the assistance of [Claude Code](https://claude.com/claude-code) (Anthropic).
+
 ---
 KON314 Control System Design
