@@ -58,5 +58,9 @@ PoleDragLab
 
 Developed with the assistance of [Claude Code](https://claude.com/claude-code) (Anthropic).
 
+## Acknowledgement
+
+Developed with the assistance of [Claude Code](https://claude.com/claude-code) (Anthropic).
+
 ---
 KON314 Control System Design
