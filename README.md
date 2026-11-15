@@ -21,7 +21,7 @@ $$G(s)=\frac{\omega_n^2}{s^2+2\zeta\omega_n s+\omega_n^2},\qquad p=\sigma\pm j\o
 PoleDragLab
 ```
 
-![Pole Drag Lab](docs/pole_drag_lab.png)
+![Pole Drag Lab](docs/pole_drag_lab.gif)
 
 - Click or drag in the s-plane to move the pole pair. The mass goes back to rest and the expected response is shown faintly.
 - **▶ Play** starts the mass–spring–damper ($m=1$, $c=2\zeta\omega_n$, $k=\omega_n^2$) from rest ($y=0$) and draws the step response as time runs. Use **Pause/Resume**, a speed of 0.25×–2×, and **Loop** to repeat.

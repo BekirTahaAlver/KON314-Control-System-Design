@@ -91,10 +91,10 @@ title(axM,'');
 % ---- step response ----
 axY = uiaxes(g);  axY.Layout.Row = 2;  axY.Layout.Column = 2;
 hold(axY,'on'); grid(axY,'on'); box(axY,'on');
-disableDefaultInteractivity(axY);
-patch(axY,[0 T T 0],[0.98 0.98 1.02 1.02],cTs,'FaceAlpha',0.15,'EdgeColor','none', ...
+disableDefaultInteractivity(axY);  axY.Toolbar.Visible = 'off';
+hBand = patch(axY,[0 T T 0],[0.98 0.98 1.02 1.02],cTs,'FaceAlpha',0.15,'EdgeColor','none', ...
     'DisplayName','±2% band');
-plot(axY,[0 T],[1 1],'k--','DisplayName','Reference r = 1');
+hRef = plot(axY,[0 T],[1 1],'k--','DisplayName','Reference r = 1');
 hYf  = plot(axY,t,Y,'Color',[cY 0.25],'LineWidth',1.5,'HandleVisibility','off');
 hY   = plot(axY,t,Y,'Color',cY,'LineWidth',2.2,'DisplayName','Step response y(t)');
 hTp  = plot(axY,[0 0],[-1 3],'--','Color',cTp,'LineWidth',1.2,'DisplayName','T_p');
@@ -105,7 +105,7 @@ hCur = plot(axY,0,0,'o','MarkerFaceColor',[0.8 0 0],'MarkerEdgeColor','none', ..
     'MarkerSize',9,'HandleVisibility','off');
 xlabel(axY,'Time [s]');  ylabel(axY,'Output y');  title(axY,'Unit step response');
 axY.XLim = [0 T];  axY.YLim = [-0.3 2.2];
-legend(axY,'Location','northeast');
+legend(axY,[hBand hRef hY hTp hTs hPk],'Location','northeast');   % fixed list: kept curves never reorder it
 
 %% ---------------- Side panel ----------------
 side = uigridlayout(g,[16 3],'RowHeight',{22,44,22,30,30,8,22,22,22,22,22,22,22,22,56,'1x'}, ...
