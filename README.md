@@ -33,6 +33,30 @@ Requires MATLAB R2024b or newer. No toolboxes needed.
 | `ZieglerNicholsLab.m` | The app (a single MATLAB file) |
 | `ZieglerNicholsLab_Guide.pdf` | Student guide (2 pages) |
 | `ZieglerNicholsLab_Guide.md` | Student guide (Markdown) |
+| `PoleDragLab.m` | Pole Drag Lab: drag the poles of a 2nd-order system (single MATLAB file) |
+
+## Pole Drag Lab — where the poles are decides how it moves
+
+`PoleDragLab.m` shows the link between the pole locations of a 2nd-order system and its step response.
+
+$$G(s)=\frac{\omega_n^2}{s^2+2\zeta\omega_n s+\omega_n^2},\qquad p=\sigma\pm j\omega_d$$
+
+```matlab
+PoleDragLab
+```
+
+![Pole Drag Lab](docs/pole_drag_lab.png)
+
+- Click or drag in the s-plane to move the pole pair. The mass goes back to rest and the expected response is shown faintly.
+- **▶ Play** starts the mass–spring–damper ($m=1$, $c=2\zeta\omega_n$, $k=\omega_n^2$) from rest ($y=0$) and draws the step response as time runs. Use **Pause/Resume**, a speed of 0.25×–2×, and **Loop** to repeat.
+- ζ, ωn, σ, ωd and the measured %OS, Tp, Ts and Tr update as the pole moves. The guide lines share colours with the readouts: vertical line ↔ Ts, horizontal line ↔ Tp, ray ↔ %OS (ζ), circle ↔ ωn.
+- **Drag mode** keeps σ, ωd, ζ or ωn fixed while you drag, so students can see one specification stay fixed while the others change.
+- **Examples:** ζ = 0.2, 0.7, 1, 0, and an unstable pole (the damper turns red: $c<0$).
+- **Keep curve** freezes the current response in grey for comparison.
+
+## Acknowledgement
+
+Developed with the assistance of [Claude Code](https://claude.com/claude-code) (Anthropic).
 
 ---
 KON314 Control System Design
