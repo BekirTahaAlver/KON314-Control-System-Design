@@ -7,6 +7,7 @@ Requires MATLAB R2024b or newer. No toolboxes needed.
 | Lab | Run | Topic |
 |---|---|---|
 | [Pole Drag Lab](#pole-drag-lab) | `PoleDragLab` | Pole location ↔ step response of a 2nd-order system |
+| [Root Locus Lab](#root-locus-lab) | `RootLocusLab` | How the closed-loop poles move as the gain K grows |
 | [Ziegler–Nichols Tuning Lab](#zieglernichols-tuning-lab) | `ZieglerNicholsLab` | Closed-loop (critical gain) PID tuning of a heated water tank |
 
 ---
@@ -29,6 +30,27 @@ PoleDragLab
 - **Drag mode** keeps σ, ωd, ζ or ωn fixed while you drag, so students can see one specification stay fixed while the others change.
 - **Examples:** ζ = 0.2, 0.7, 1, 0, and an unstable pole (the damper turns red: $c<0$).
 - **Keep curve** freezes the current response in grey for comparison.
+
+---
+
+## Root Locus Lab
+
+Turn up the gain and watch the poles move. `RootLocusLab.m` shows the closed-loop poles of a unity-feedback loop as the gain $K$ goes from 0 upward, next to the closed-loop step response.
+
+$$1+K\,G(s)=0$$
+
+```matlab
+RootLocusLab
+```
+
+![Root Locus Lab](docs/root_locus_lab.png)
+
+- Move the **K slider**, type a value, or click and drag along the locus in the s-plane.
+- **▶ Sweep K** animates K from 0 to Kmax (tick **Loop** to repeat).
+- The locus starts on the open-loop poles (×) and ends on the zeros (○) or goes to infinity.
+- **Kcr** is the gain at which the poles cross the jω axis. **K = Kcr** jumps to it, and the response oscillates forever. This is the same Kcr as in the Ziegler–Nichols lab.
+- **Examples:** $\frac{1}{s(s+1)}$ → add a pole $\frac{1}{s(s+1)(s+3)}$ (becomes unstable at $K_{cr}=12$) → add a zero $\frac{s+2}{s(s+1)}$, $\frac{s+2}{s(s+1)(s+3)}$ (stable for every K).
+- **Keep curve** freezes the current response and poles in grey for comparison.
 
 ---
 
