@@ -44,7 +44,7 @@ $$1+K\,G(s)=0$$
 RootLocusLab
 ```
 
-![Root Locus Lab](docs/root_locus_lab.png)
+![Root Locus Lab](docs/root_locus_lab.gif)
 
 - Move the **K slider**, type a value, or click and drag along the locus in the s-plane.
 - **▶ Sweep K** animates K from 0 to Kmax (tick **Loop** to repeat).
@@ -65,7 +65,7 @@ $$F(s)=K_p+\frac{K_I}{s}+K_d s,\qquad u=K_p\,e+K_I\!\int e\,dt+K_d\,\dot e$$
 PIDTermsLab
 ```
 
-![PID Terms Lab](docs/pid_terms_lab.png)
+![PID Terms Lab](docs/pid_terms_lab.gif)
 
 - **Plant 1, type 1: P is too slow** (Nise p.515): $G(s)=\frac{1}{s(s+4)(s+6)}$. P with $K=43.35$ gives 16 % overshoot. PD with $F(s)=47.45(s+3)$ keeps the overshoot and settles about 3× faster. The D term turns negative while $y$ rises fast, so it brakes early.
 - **Plant 2, type 0: P leaves $e_{ss} \neq 0$** (Nise p.507): $G(s)=\frac{1}{(s+1)(s+2)(s+10)}$. P with $K=164.6$ ($\zeta=0.174$) stops short: $e_{ss}=0.108$. PI with $F(s)=158.2+\frac{15.82}{s}$ reaches $e_{ss}=0$. The I term keeps growing until $e=0$ and then holds $u$, while the P term goes to zero.
@@ -88,7 +88,7 @@ Students increase the proportional gain **K** step by step until the temperature
 ZieglerNicholsLab
 ```
 
-![The lab window](docs/screenshot.png)
+![Ziegler–Nichols Tuning Lab](docs/ziegler_nichols_lab.gif)
 
 ### What students see
 
@@ -112,7 +112,7 @@ ZieglerNicholsLab
 | `ZieglerNicholsLab.m` | Ziegler–Nichols Tuning Lab (single MATLAB file) |
 | `ZieglerNicholsLab_Guide.pdf` | Ziegler–Nichols student guide (2 pages) |
 | `ZieglerNicholsLab_Guide.md` | Ziegler–Nichols student guide (Markdown) |
-| `docs/` | Screenshots used in this README |
+| `docs/` | Screenshots and animated GIFs used in this README |
 
 ## Acknowledgement
 

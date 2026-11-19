@@ -228,7 +228,7 @@ if nargout > 0, figOut = fig; end
         % s-plane
         hCL.XData = real(r);  hCL.YData = imag(r);
         [~, it] = max(imag(r));
-        hKt.Position = [real(r(it))+0.2, imag(r(it))+0.4, 0];
+        hKt.Position = [min(real(r(it))+0.2, xl(2)-1.2), min(imag(r(it))+0.4, yl(2)-0.3), 0];   % stay inside the s-plane
         hKt.String = sprintf('K = %.2f', K);
 
         % gain controls (only when they really change: each write is a round trip)
